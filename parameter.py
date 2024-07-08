@@ -23,10 +23,7 @@ def parameter_selection(selected_model):
 
     if selected_model == "tree":
         # 決定木のパラメータ選択 
-        criterion_options = ["gini", "entropy"]
-        criterion = st.selectbox("criterion", criterion_options)
-        max_depth = st.slider("max_depth", 1, 10, 5, 1)
-        params["criterion"] = criterion
+        max_depth = st.slider("max_depth（木の最大深さ）", 1, 10, 5, 1)
         params["max_depth"] = max_depth
 
     elif selected_model == "rf":
